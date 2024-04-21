@@ -1,0 +1,29 @@
+server:
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: gateway
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/my-user
+jwt:
+  secret: ab62914d977e2a6345493158d581a08a9f0c4823cdbde31b182a2e9d620084b1
+  expiration:
+    time: 20400
+
+springdoc:
+  enable-native-support: true
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    config-url: /v3/api-docs/swagger-config
+    urls:
+      - url: /v3/api-docs
+        name: API Gateway Service
+        display-name: API Gateway Service
+      - url: /my-storage/v3/api-docs
+        name: MyStorage Service
+        display-name: MyStorage Service
