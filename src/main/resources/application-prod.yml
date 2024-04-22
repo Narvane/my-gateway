@@ -6,7 +6,7 @@ spring:
     name: gateway
   data:
     mongodb:
-      uri: mongodb://localhost:27017/my-user
+      uri: mongodb://192.168.1.173:27017/my-user
 jwt:
   secret: ab62914d977e2a6345493158d581a08a9f0c4823cdbde31b182a2e9d620084b1
   expiration:
@@ -29,4 +29,4 @@ springdoc:
         display-name: MyStorage Service
 services:
   my-storage:
-    host: http://localhost:8081
+    host: http://my-storage-service
